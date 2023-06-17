@@ -21,6 +21,7 @@ import (
 	"github.com/goravel/framework/validation"
 
 	"goravel/app/providers"
+	"goravel/modules"
 )
 
 // Boot Start all init methods of the current folder to bootstrap all config.
@@ -89,6 +90,7 @@ func init() {
 			&providers.QueueServiceProvider{},
 			&providers.EventServiceProvider{},
 			&providers.ValidationServiceProvider{},
+			&modules.BootstrapServiceProvider{},
 		},
 	})
 }
