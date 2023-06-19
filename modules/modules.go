@@ -1,23 +1,23 @@
 package modules
 
 import (
-	"github.com/goravel/framework/contracts"
+	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
 )
 
 type BootstrapServiceProvider struct {
 }
 
-func (r BootstrapServiceProvider) Boot() {
-	serviceProviders := facades.Config.Get("modules.providers").([]contracts.ServiceProvider)
+func (r BootstrapServiceProvider) Boot(app foundation.Application) {
+	serviceProviders := facades.Config().Get("modules.providers").([]foundation.ServiceProvider)
 	for _, serviceProvider := range serviceProviders {
-		serviceProvider.Boot()
+		serviceProvider.Boot(app)
 	}
 }
 
-func (r BootstrapServiceProvider) Register() {
-	serviceProviders := facades.Config.Get("modules.providers").([]contracts.ServiceProvider)
+func (r BootstrapServiceProvider) Register(app foundation.Application) {
+	serviceProviders := facades.Config().Get("modules.providers").([]foundation.ServiceProvider)
 	for _, serviceProvider := range serviceProviders {
-		serviceProvider.Register()
+		serviceProvider.Register(app)
 	}
 }

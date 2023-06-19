@@ -1,6 +1,7 @@
 package providers
 
 import (
+	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
 
 	"goravel/app/http"
@@ -10,13 +11,13 @@ import (
 type RouteServiceProvider struct {
 }
 
-func (r RouteServiceProvider) Boot() {
+func (r RouteServiceProvider) Boot(app foundation.Application) {
 
 }
 
-func (r RouteServiceProvider) Register() {
+func (r RouteServiceProvider) Register(app foundation.Application) {
 	//Add HTTP middlewares
-	facades.Route.GlobalMiddleware(http.Kernel{}.Middleware()...)
+	facades.Route().GlobalMiddleware(http.Kernel{}.Middleware()...)
 	//Add routes
 	routes.Api()
 	routes.Web()

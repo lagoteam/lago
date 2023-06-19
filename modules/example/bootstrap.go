@@ -1,14 +1,17 @@
 package example
 
-import "goravel/modules/example/providers"
+import (
+	"github.com/goravel/framework/contracts/foundation"
+	"goravel/modules/example/providers"
+)
 
 type BootstrapServiceProvider struct {
 }
 
-func (r BootstrapServiceProvider) Boot() {
-	providers.AppServiceProvider{}.Boot()
+func (r BootstrapServiceProvider) Boot(app foundation.Application) {
+	providers.AppServiceProvider{}.Boot(app)
 }
 
-func (r BootstrapServiceProvider) Register() {
-	providers.AppServiceProvider{}.Register()
+func (r BootstrapServiceProvider) Register(app foundation.Application) {
+	providers.AppServiceProvider{}.Register(app)
 }
