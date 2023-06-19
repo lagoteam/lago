@@ -4,6 +4,7 @@ import (
 	"github.com/goravel/framework/contracts"
 	"github.com/goravel/framework/facades"
 
+	"goravel/modules/example"
 	"goravel/modules/lago"
 )
 
@@ -13,6 +14,7 @@ func init() {
 		"enabled": config.Env("MODULES_ENABLED", true),
 
 		"providers": []contracts.ServiceProvider{
+			&example.BootstrapServiceProvider{},
 			&lago.BootstrapServiceProvider{},
 		},
 
