@@ -6,35 +6,31 @@ type Result struct {
 	Data    interface{} `json:"data,omitempty"`
 }
 
+func NewResult() *Result {
+	return &Result{}
+}
+
 func Success() *Result {
-	/*return &Result{
-		Code:    "200",
-		Message: "Success",
-	}*/
-	return &Result{
-		Code:    CodeSuccess,
-		Message: CodeMessage[CodeSuccess],
-	}
+	result := NewResult()
+	result.SetCode(SuccessCode)                       // 200
+	result.SetMessage(ResultCodeMessage[SuccessCode]) // Success
+	return result
 }
 
 func Fail() *Result {
-	/*return &Result{
-		Code:    "400",
-		Message: "Fail",
-	}*/
-	return &Result{
-		Code:    CodeFail,
-		Message: CodeMessage[CodeFail],
-	}
+	result := NewResult()
+	result.SetCode(FailCode)                       // 400
+	result.SetMessage(ResultCodeMessage[FailCode]) // Fail
+	return result
+}
+
+func (r *Result) SetCode(code string) *Result {
+	r.Code = code
+	return r
 }
 
 func (r *Result) SetMessage(message string) *Result {
 	r.Message = message
-	return r
-}
-
-func (r *Result) SetCode(code interface{}) *Result {
-	r.Code = code.(string)
 	return r
 }
 
@@ -43,7 +39,7 @@ func (r *Result) SetData(data interface{}) *Result {
 	return r
 }
 
-func (r *Result) PutData(key string, value interface{}) *Result {
+/*func (r *Result) PutData(key string, value interface{}) *Result {
 	data := map[string]interface{}{}
 	if r.Data != nil {
 		data = r.Data.(map[string]interface{})
@@ -51,4 +47,4 @@ func (r *Result) PutData(key string, value interface{}) *Result {
 	data[key] = value
 	r.Data = data
 	return r
-}
+}*/
