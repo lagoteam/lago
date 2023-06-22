@@ -36,8 +36,8 @@ go mod tidy
 #go get -v -u github.com/cosmtrek/air
 #go get -u github.com/kataras/rizla
 
-#// go get github.com/goravel/framework@v1.12.2
-#//replace github.com/goravel/framework v1.12.0 => github.com/goravel/framework v1.12.2
+#// go get github.com/goravel/framework@v1.12.3
+#//replace github.com/goravel/framework v1.12.0 => github.com/goravel/framework v1.12.3
 
 echo "正在编译应用..."
 go env -w CGO_ENABLED=0

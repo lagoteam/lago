@@ -2,10 +2,13 @@ module goravel
 
 go 1.18
 
+//replace github.com/goravel/sms v1.0.0 => ./packages/sms
+
 require (
 	github.com/gin-contrib/static v0.0.1
 	github.com/goravel/framework v1.12.3
 	github.com/goravel/redis v1.0.0
+	//github.com/goravel/sms v1.0.0
 	github.com/pkg/errors v0.9.1
 	google.golang.org/grpc v1.56.0
 )

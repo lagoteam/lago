@@ -14,8 +14,8 @@ func init() {
 		"enabled": config.Env("MODULES_ENABLED", true),
 
 		"providers": []foundation.ServiceProvider{
-			&example.BootstrapServiceProvider{},
-			&lago.BootstrapServiceProvider{},
+			&example.ServiceProvider{},
+			&lago.ServiceProvider{},
 		},
 
 		/*"paths": map[string]interface{}{
