@@ -1,18 +1,17 @@
 package routes
 
 import (
-	"github.com/goravel/framework/contracts/http"
 	"github.com/goravel/framework/contracts/route"
 	"github.com/goravel/framework/facades"
+
+	moduleControllers "goravel/modules/lago/http/controllers"
 )
 
 func Web() {
-	facades.Route().Prefix("lago").Group(func(webRoute route.Route) {
-		webRoute.Get("", func(ctx http.Context) {
-			ctx.Response().Json(http.StatusOK, http.Json{
-				"name":    facades.Config().GetString("app.name"),
-				"version": facades.Config().GetString("app.version"),
-			})
+	facades.Route().Prefix("").Group(func(webRoute route.Route) {
+		facades.Route().Prefix(facades.Config().GetString("lago.route_prefix")).Group(func(moduleRoute route.Route) {
+			indexController := moduleControllers.NewIndexController()
+			moduleRoute.Get("", indexController.Index)
 		})
 	})
 }
