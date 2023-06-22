@@ -1,0 +1,8 @@
+*
+!.gitignore
+!attach/
+!default/
+!files/
+!images/
+!users/
+!videos/

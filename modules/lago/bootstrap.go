@@ -3,19 +3,25 @@ package lago
 import (
 	"github.com/goravel/framework/contracts/foundation"
 	"github.com/goravel/framework/facades"
+
+	moduleProviders "goravel/modules/lago/providers"
 )
 
+const Name string = "lago"
 const Version string = "1.0.0"
+const PrefixPath string = "/lago"
 
 type BootstrapServiceProvider struct {
 }
 
 func (r BootstrapServiceProvider) Boot(app foundation.Application) {
 	//facades.Log().Debugf("[%#v] BootstrapServiceProvider.Boot()", "lago")
+	moduleProviders.AppServiceProvider{}.Boot(app)
 }
 
 func (r BootstrapServiceProvider) Register(app foundation.Application) {
 	//facades.Log().Debugf("[%#v] BootstrapServiceProvider.Register()", "lago")
+	moduleProviders.AppServiceProvider{}.Register(app)
 }
 
 func (r BootstrapServiceProvider) Install() {

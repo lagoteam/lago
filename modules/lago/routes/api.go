@@ -4,12 +4,12 @@ import (
 	"github.com/goravel/framework/contracts/route"
 	"github.com/goravel/framework/facades"
 
-	moduleControllers "goravel/modules/example/http/controllers"
+	moduleControllers "goravel/modules/lago/http/controllers"
 )
 
 func Api() {
 	facades.Route().Prefix("api").Group(func(apiRoute route.Route) {
 		indexController := moduleControllers.NewIndexController()
-		apiRoute.Get("/example", indexController.Index)
+		apiRoute.Get("/lago", indexController.Index)
 	})
 }

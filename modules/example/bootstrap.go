@@ -2,7 +2,8 @@ package example
 
 import (
 	"github.com/goravel/framework/contracts/foundation"
-	"goravel/modules/example/providers"
+
+	moduleProviders "goravel/modules/example/providers"
 )
 
 const Name string = "example"
@@ -12,9 +13,9 @@ type BootstrapServiceProvider struct {
 }
 
 func (r BootstrapServiceProvider) Boot(app foundation.Application) {
-	providers.AppServiceProvider{}.Boot(app)
+	moduleProviders.AppServiceProvider{}.Boot(app)
 }
 
 func (r BootstrapServiceProvider) Register(app foundation.Application) {
-	providers.AppServiceProvider{}.Register(app)
+	moduleProviders.AppServiceProvider{}.Register(app)
 }
