@@ -2,12 +2,12 @@ root = "."
 tmp_dir = "storage/temp"
 
 [build]
-  # linux / mac
-  #bin = "./storage/temp/main"
-  #cmd = "go build -o ./storage/temp/main ."
   # windows
   bin = "./storage/temp/main.exe"
   cmd = "go build -o ./storage/temp/main.exe ."
+  # linux | mac
+  bin = "./storage/temp/main"
+  cmd = "go build -o ./storage/temp/main ."
   delay = 1000
   exclude_dir = ["storage", "database"]
   exclude_file = []

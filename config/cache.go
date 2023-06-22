@@ -1,7 +1,9 @@
 package config
 
 import (
+	"github.com/goravel/framework/contracts/cache"
 	"github.com/goravel/framework/facades"
+	redisFacades "github.com/goravel/redis/facades"
 )
 
 func init() {
@@ -24,6 +26,13 @@ func init() {
 			"memory": map[string]any{
 				"driver": "memory",
 			},
+			"redis": map[string]any{
+				"driver":     "custom",
+				"connection": "default",
+				"via": func() (cache.Driver, error) {
+					return redisFacades.Redis("redis"), nil // The `redis` value is the key of `stores`
+				},
+			},
 		},
 
 		// Cache Key Prefix
@@ -32,6 +41,6 @@ func init() {
 		// be other applications utilizing the same cache. So, we'll specify a
 		// value to get prefixed to all our keys, so we can avoid collisions.
 		// Must: a-zA-Z0-9_-
-		"prefix": config.GetString("APP_NAME", "goravel") + "_cache",
+		"prefix": config.GetString("APP_NAME", "lago") + "_cache",
 	})
 }

@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/goravel/framework/contracts/http"
+	"github.com/goravel/framework/facades"
 )
 
 type UserController struct {
@@ -16,6 +17,6 @@ func NewUserController() *UserController {
 
 func (r *UserController) Show(ctx http.Context) {
 	ctx.Response().Success().Json(http.Json{
-		"Hello": "Goravel",
+		"Hello": facades.Config().GetString("app.name"),
 	})
 }

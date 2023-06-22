@@ -18,8 +18,10 @@ import (
 	"github.com/goravel/framework/queue"
 	"github.com/goravel/framework/route"
 	"github.com/goravel/framework/schedule"
+	"github.com/goravel/framework/support"
 	"github.com/goravel/framework/support/carbon"
 	"github.com/goravel/framework/validation"
+	"github.com/goravel/redis"
 
 	"goravel/app/providers"
 	"goravel/modules"
@@ -36,7 +38,10 @@ func init() {
 		// This value is the name of your application. This value is used when the
 		// framework needs to place the application's name in a notification or
 		// any other location as required by the application or its packages.
-		"name": config.Env("APP_NAME", "Goravel"),
+		"name": config.Env("APP_NAME", "Lago"),
+
+		// Application Version
+		"version": config.Env("APP_VERSION", support.Version),
 
 		// Application Environment
 		//
@@ -71,6 +76,7 @@ func init() {
 			&console.ServiceProvider{},
 			&database.ServiceProvider{},
 			&cache.ServiceProvider{},
+			&redis.ServiceProvider{},
 			&http.ServiceProvider{},
 			&route.ServiceProvider{},
 			&schedule.ServiceProvider{},
