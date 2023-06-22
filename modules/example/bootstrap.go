@@ -5,6 +5,9 @@ import (
 	"goravel/modules/example/providers"
 )
 
+const Name string = "example"
+const Version string = "1.0.0"
+
 type BootstrapServiceProvider struct {
 }
 
