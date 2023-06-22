@@ -7,10 +7,6 @@ import (
 	moduleProviders "goravel/modules/lago/providers"
 )
 
-const ModuleName string = "lago"
-const ModuleVersion string = "1.0.0"
-const ModulePrefixPath string = "/lago"
-
 type BootstrapServiceProvider struct {
 }
 
