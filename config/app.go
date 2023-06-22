@@ -1,6 +1,8 @@
 package config
 
 import (
+	"strings"
+
 	"github.com/goravel/framework/auth"
 	"github.com/goravel/framework/cache"
 	"github.com/goravel/framework/console"
@@ -41,7 +43,7 @@ func init() {
 		"name": config.Env("APP_NAME", "Lago"),
 
 		// Application Version
-		"version": config.Env("APP_VERSION", support.Version),
+		"version": config.Env("APP_VERSION", strings.TrimLeft(support.Version, "v")),
 
 		// Application Environment
 		//
