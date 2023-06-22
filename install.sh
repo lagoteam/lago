@@ -39,6 +39,7 @@ go mod tidy
 echo "正在编译应用..."
 go env -w CGO_ENABLED=0
 go env -w GOOS=linux
+#go env -w GOOS=windows
 go env -w GOARCH=amd64
 go build --ldflags "-extldflags -static" -o main .
 
