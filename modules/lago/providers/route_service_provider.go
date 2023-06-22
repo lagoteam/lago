@@ -23,7 +23,8 @@ func (r RouteServiceProvider) Register(app foundation.Application) {
 	//Add HTTP 404 Error
 	facades.Route().Fallback(func(ctx http.Context) {
 		//ctx.Response().String(404, "not found")
-		res := result.Fail().SetCode(result.CodeNotFound).SetMessage(result.CodeMessage[result.CodeNotFound])
+		//res := result.Fail().SetCode(result.CodeNotFound).SetMessage(result.CodeMessage[result.CodeNotFound])
+		res := result.Fail().SetCode("404").SetMessage("404 page not found")
 		ctx.Response().Json(200, res)
 	})
 	//Add routes
