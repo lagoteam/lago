@@ -17,7 +17,9 @@ func NewIndexController() *IndexController {
 
 func (r *IndexController) Index(ctx http.Context) {
 	ctx.Response().Json(http.StatusOK, http.Json{
-		"name":    facades.Config().GetString("app.name"),
-		"version": facades.Config().GetString("app.version"),
+		"name":           facades.Config().GetString("app.name"),
+		"version":        facades.Config().GetString("app.version"),
+		"module_name":    facades.Config().GetString("lago.name"),
+		"module_version": facades.Config().GetString("lago.version"),
 	})
 }

@@ -181,8 +181,6 @@ github.com/go-playground/universal-translator v0.17.0/go.mod h1:UkSxE5sNxxRwHyU+
 github.com/go-playground/universal-translator v0.18.1 h1:Bcnm0ZwsGyWbCzImXv+pAJnYK9S473LQFuzCbDbfSFY=
 github.com/go-playground/universal-translator v0.18.1/go.mod h1:xekY+UJKNuX9WP91TpwSH2VMlDf28Uj24BCp08ZFTUY=
 github.com/go-playground/validator/v10 v10.2.0/go.mod h1:uOYAAleCW8F/7oMFd6aG0GOhaH6EGOAJShg8Id5JGkI=
-github.com/go-playground/validator/v10 v10.14.0 h1:vgvQWe3XCz3gIeFDm/HnTIbj6UGmg/+t63MyGU2n5js=
-github.com/go-playground/validator/v10 v10.14.0/go.mod h1:9iXMNT7sEkjXb0I+enO7QXmzG6QCsPWY4zveKFVRSyU=
 github.com/go-playground/validator/v10 v10.14.1 h1:9c50NUPC30zyuKprjL3vNZ0m5oG+jU0zvx4AqHGnv4k=
 github.com/go-playground/validator/v10 v10.14.1/go.mod h1:9iXMNT7sEkjXb0I+enO7QXmzG6QCsPWY4zveKFVRSyU=
 github.com/go-redis/redis v6.15.9+incompatible h1:K0pv1D7EQUjfyoMql+r/jZqCLizCGKFlFgcHWWmHQjg=
@@ -344,8 +342,8 @@ github.com/goravel/file-rotatelogs v0.0.0-20211215053220-2ab31dd9575c h1:obhFK91
 github.com/goravel/file-rotatelogs v0.0.0-20211215053220-2ab31dd9575c/go.mod h1:YSWsLXlG16u5CWFaXNZHhEQD10+NwF3xfgDV816OwLE=
 github.com/goravel/file-rotatelogs/v2 v2.4.1 h1:ogkeIFcTHSBRUBpZYiyJbpul8hkVXxHPuDbOaP78O1M=
 github.com/goravel/file-rotatelogs/v2 v2.4.1/go.mod h1:euk9qr52WrzM8ICs1hecFcR4CZ/ZZOPdacHfvHgbOf0=
-github.com/goravel/framework v1.12.2 h1:2d+RQEVzcky6ff6LxlcPvnAj0tZPc0Y4yQAXQk88+nA=
-github.com/goravel/framework v1.12.2/go.mod h1:96GRS8270PKLfJU9zrrLE7XKlp20S2TJ9RB337jBMy4=
+github.com/goravel/framework v1.12.3 h1:gGP+7fV7qAoBVh6zz8C4caQX9Vs8XTmqSJdMa/S9BsI=
+github.com/goravel/framework v1.12.3/go.mod h1:96GRS8270PKLfJU9zrrLE7XKlp20S2TJ9RB337jBMy4=
 github.com/goravel/redis v1.0.0 h1:kfp8kHalCQMypW6OGkL54TiDagRSpvtZzU63M6fyoe8=
 github.com/goravel/redis v1.0.0/go.mod h1:Z2rnOgVzs3pAdEHR2cb59Gi8vt/Y7k/WkAirlob9xHE=
 github.com/gorilla/securecookie v1.1.1/go.mod h1:ra0sb63/xPlUeL+yeDciTfxMRAA+MP+HVt/4epWDjd4=

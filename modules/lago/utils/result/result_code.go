@@ -21,6 +21,11 @@ func (r *ResultCode) Fail() *ResultCode {
 	return r
 }
 
+/*var Codes = [...]ResultCode{
+	{Code: "-1", Message: "系统内部错误"},
+	{Code: "404", Message: "未登录"},
+}*/
+
 const (
 	CodeSuccess             = "200"
 	CodeFail                = "400"

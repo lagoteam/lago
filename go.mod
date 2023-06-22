@@ -3,8 +3,10 @@ module goravel
 go 1.18
 
 require (
-	github.com/goravel/framework v1.12.2
+	github.com/gin-contrib/static v0.0.1
+	github.com/goravel/framework v1.12.3
 	github.com/goravel/redis v1.0.0
+	github.com/pkg/errors v0.9.1
 	google.golang.org/grpc v1.56.0
 )
 
@@ -42,7 +44,6 @@ require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-contrib/static v0.0.1 // indirect
 	github.com/gin-gonic/gin v1.9.1 // indirect
 	github.com/glebarez/go-sqlite v1.21.1 // indirect
 	github.com/glebarez/sqlite v1.8.0 // indirect
@@ -110,7 +111,6 @@ require (
 	github.com/ory/dockertest/v3 v3.10.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
 	github.com/rifflock/lfshook v0.0.0-20180920164130-b9218ef580f5 // indirect
