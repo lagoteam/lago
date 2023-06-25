@@ -13,9 +13,9 @@ type UserService struct {
 }
 
 func NewUserService() UserService {
-	dao := facades.Orm().Query().Model(&models.User{})
 	return UserService{
-		Dao: dao,
+		BaseService: NewBaseService(),
+		Dao:         facades.Orm().Query().Model(&models.User{}),
 	}
 }
 

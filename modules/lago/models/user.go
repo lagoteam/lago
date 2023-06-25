@@ -8,32 +8,36 @@ import (
 
 type User struct {
 	TableID
-	Username          string          `json:"username"`
-	Password          string          `json:"password"`
-	Email             string          `json:"email"`
-	Mobile            string          `json:"mobile"`
-	Nickname          string          `json:"nickname"`
-	Avatar            string          `json:"avatar"`
-	Signature         string          `json:"signature"`
-	RealName          string          `json:"real_name"`
-	IdentityCard      string          `json:"identity_card"`
-	Gender            int             `json:"gender"`
-	Age               int             `json:"age"`
-	Birthday          carbon.DateTime `json:"birthday"`
-	Money             decimal.Decimal `json:"money"`
-	Monetary          decimal.Decimal `json:"monetary"`
-	Level             int             `json:"level"`
-	Integral          int             `json:"integral"`
-	HistoryIntegral   int             `json:"history_integral"`
-	VipLevel          int             `json:"vip_level"`
-	VipExp            int             `json:"vip_exp"`
-	VipTime           carbon.DateTime `json:"vip_time"`
-	EmailVerifiedTime carbon.DateTime `json:"email_verified_time"`
-	InviteCode        string          `json:"invite_code"`
-	Status            int             `json:"status"`
-	TeamId            uint            `json:"team_id"`
-	PromotionId       uint            `json:"promotion_id"`
-	PromotionTime     carbon.DateTime `json:"promotion_time"`
+	Username                   string          `json:"username"`
+	Password                   string          `json:"password"`
+	Email                      string          `json:"email"`
+	Mobile                     string          `json:"mobile"`
+	Nickname                   string          `json:"nickname"`
+	Avatar                     string          `json:"avatar"`
+	Signature                  string          `json:"signature"`
+	RealName                   string          `json:"real_name"`
+	Gender                     int             `json:"gender"`
+	Age                        int             `json:"age"`
+	Birthday                   carbon.DateTime `json:"birthday"`
+	IdentityCard               string          `json:"identity_card"`
+	IdentityType               int             `json:"identity_type"`
+	IdentityFront              string          `json:"identity_front"`
+	IdentityBack               string          `json:"identity_back"`
+	RealNameAuthenticationTime carbon.DateTime `json:"real_name_authentication_time"`
+	Money                      decimal.Decimal `json:"money"`
+	Monetary                   decimal.Decimal `json:"monetary"`
+	Level                      int             `json:"level"`
+	Integral                   int             `json:"integral"`
+	HistoryIntegral            int             `json:"history_integral"`
+	VipLevel                   int             `json:"vip_level"`
+	VipExp                     int             `json:"vip_exp"`
+	VipTime                    carbon.DateTime `json:"vip_time"`
+	EmailVerifiedTime          carbon.DateTime `json:"email_verified_time"`
+	InviteCode                 string          `json:"invite_code"`
+	Status                     int             `json:"status"`
+	TeamId                     uint            `json:"team_id"`
+	PromotionId                uint            `json:"promotion_id"`
+	PromotionTime              carbon.DateTime `json:"promotion_time"`
 	TableTenantId
 	TableTimestamps
 	TableSoftDeletes

@@ -19,11 +19,10 @@ func Api() {
 			})
 			indexController := moduleControllers.NewIndexController()
 			moduleRoute.Get("", indexController.Index)
-
-			userController := moduleControllers.NewUserController()
-			moduleRoute.Get("user/list", userController.List)
-			moduleRoute.Post("user/add", userController.Add)
-			moduleRoute.Get("user/detail/{id}", userController.Show)
 		})
+		userController := moduleControllers.NewUserController()
+		apiRoute.Get("user/list", userController.List)
+		apiRoute.Post("user/add", userController.Add)
+		apiRoute.Get("user/detail/{id}", userController.Show)
 	})
 }
