@@ -9,7 +9,7 @@ import (
 type User struct {
 	TableID
 	Username                   string          `json:"username"`
-	Password                   string          `json:"password"`
+	Password                   string          `json:"-"`
 	Email                      string          `json:"email"`
 	Mobile                     string          `json:"mobile"`
 	Nickname                   string          `json:"nickname"`

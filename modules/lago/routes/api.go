@@ -5,7 +5,8 @@ import (
 	"github.com/goravel/framework/contracts/route"
 	"github.com/goravel/framework/facades"
 
-	moduleControllers "goravel/modules/lago/http/controllers"
+	"goravel/modules/lago/http/controllers"
+	"goravel/modules/lago/http/controllers/api/v1"
 )
 
 func Api() {
@@ -17,12 +18,16 @@ func Api() {
 					"version": facades.Config().GetString("app.version"),
 				})
 			})
-			indexController := moduleControllers.NewIndexController()
+			indexController := controllers.NewIndexController()
 			moduleRoute.Get("", indexController.Index)
 		})
-		userController := moduleControllers.NewUserController()
-		apiRoute.Get("user/list", userController.List)
-		apiRoute.Post("user/add", userController.Add)
-		apiRoute.Get("user/detail/{id}", userController.Show)
+
+		apiRoute.Prefix("v1").Group(func(v1ApiRoute route.Route) {
+			userController := v1.NewUserController()
+			v1ApiRoute.Get("user/list", userController.List)
+			v1ApiRoute.Post("user/add", userController.Add)
+			v1ApiRoute.Get("user/detail/{id}", userController.Show)
+		})
+
 	})
 }

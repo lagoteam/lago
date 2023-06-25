@@ -49,4 +49,4 @@ CREATE TABLE user (
   KEY idx_user_create_time (`create_time`),
   KEY idx_user_update_time (`update_time`),
   KEY idx_user_delete_time (`delete_time`)
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COMMENT='用户表';
