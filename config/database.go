@@ -19,10 +19,10 @@ func init() {
 				"database": config.Env("DB_DATABASE", "forge"),
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
-				"charset":  "utf8mb4",
+				"charset":  config.Env("DB_CHARSET", "utf8mb4"),
 				"loc":      "Local",
-				"prefix":   "",
-				"singular": false, // Table name is singular
+				"prefix":   config.Env("DB_PREFIX", ""),
+				"singular": config.Env("DB_SINGULAR", false), // Table name is singular
 			},
 			"postgresql": map[string]any{
 				"driver":   "postgresql",
@@ -32,15 +32,15 @@ func init() {
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
 				"sslmode":  "disable",
-				"timezone": "UTC", //Asia/Shanghai
-				"prefix":   "",
-				"singular": false, // Table name is singular
+				"timezone": config.Env("DB_TIMEZONE", "UTC"), //Asia/Shanghai
+				"prefix":   config.Env("DB_PREFIX", ""),
+				"singular": config.Env("DB_SINGULAR", false), // Table name is singular
 			},
 			"sqlite": map[string]any{
 				"driver":   "sqlite",
 				"database": config.Env("DB_DATABASE", "forge"),
-				"prefix":   "",
-				"singular": false, // Table name is singular
+				"prefix":   config.Env("DB_PREFIX", ""),
+				"singular": config.Env("DB_SINGULAR", false), // Table name is singular
 			},
 			"sqlserver": map[string]any{
 				"driver":   "sqlserver",
@@ -49,9 +49,9 @@ func init() {
 				"database": config.Env("DB_DATABASE", "forge"),
 				"username": config.Env("DB_USERNAME", ""),
 				"password": config.Env("DB_PASSWORD", ""),
-				"charset":  "utf8mb4",
-				"prefix":   "",
-				"singular": false, // Table name is singular
+				"charset":  config.Env("DB_CHARSET", "utf8mb4"),
+				"prefix":   config.Env("DB_PREFIX", ""),
+				"singular": config.Env("DB_SINGULAR", false), // Table name is singular
 			},
 		},
 
@@ -64,7 +64,7 @@ func init() {
 			// then the new MaxIdleConns will be reduced to match the MaxOpenConns limit.
 			//
 			// If n <= 0, no idle connections are retained.
-			"max_idle_conns": 10,
+			"max_idle_conns": config.Env("POOL_MAX_IDLE_CONNS", 10),
 			// Sets the maximum number of open connections to the database.
 			//
 			// If MaxIdleConns is greater than 0 and the new MaxOpenConns is less than
@@ -72,21 +72,21 @@ func init() {
 			// MaxOpenConns limit.
 			//
 			// If n <= 0, then there is no limit on the number of open connections.
-			"max_open_conns": 100,
+			"max_open_conns": config.Env("POOL_MAX_OPEN_CONNS", 100),
 			// Sets the maximum amount of time a connection may be idle.
 			//
 			// Expired connections may be closed lazily before reuse.
 			//
 			// If d <= 0, connections are not closed due to a connection's idle time.
 			// Unit: Second
-			"conn_max_idletime": 3600,
+			"conn_max_idletime": config.Env("POOL_CONN_MAX_IDLETIME", 3600),
 			// Sets the maximum amount of time a connection may be reused.
 			//
 			// Expired connections may be closed lazily before reuse.
 			//
 			// If d <= 0, connections are not closed due to a connection's age.
 			// Unit: Second
-			"conn_max_lifetime": 3600,
+			"conn_max_lifetime": config.Env("POOL_CONN_MAX_LIFETIME", 3600),
 		},
 
 		// Migration Repository Table
@@ -94,7 +94,7 @@ func init() {
 		// This table keeps track of all the migrations that have already run for
 		// your application. Using this information, we can determine which of
 		// the migrations on disk haven't actually been run in the database.
-		"migrations": "migrations",
+		"migrations": config.Env("MIGRATION_TABLE", "migrations"),
 
 		// Redis Databases
 		//

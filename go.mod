@@ -9,8 +9,13 @@ require (
 	github.com/goravel/framework v1.12.3
 	github.com/goravel/redis v1.0.0
 	//github.com/goravel/sms v1.0.0
-	github.com/pkg/errors v0.9.1
+	github.com/pkg/errors v0.9.1 // indirect
 	google.golang.org/grpc v1.56.0
+)
+
+require (
+	github.com/shopspring/decimal v1.2.0
+	gorm.io/gorm v1.25.1
 )
 
 require (
@@ -168,7 +173,6 @@ require (
 	gorm.io/driver/mysql v1.5.1 // indirect
 	gorm.io/driver/postgres v1.5.2 // indirect
 	gorm.io/driver/sqlserver v1.5.1 // indirect
-	gorm.io/gorm v1.25.1 // indirect
 	gorm.io/plugin/dbresolver v1.4.1 // indirect
 	modernc.org/libc v1.22.3 // indirect
 	modernc.org/mathutil v1.5.0 // indirect
