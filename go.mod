@@ -14,7 +14,10 @@ require (
 )
 
 require (
+	github.com/gookit/color v1.5.3
+	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d
 	github.com/shopspring/decimal v1.2.0
+	github.com/spf13/cast v1.5.1
 	gorm.io/gorm v1.25.1
 )
 
@@ -80,7 +83,6 @@ require (
 	github.com/google/wire v0.5.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.4 // indirect
 	github.com/googleapis/gax-go/v2 v2.10.0 // indirect
-	github.com/gookit/color v1.5.3 // indirect
 	github.com/gookit/filter v1.1.4 // indirect
 	github.com/gookit/goutil v0.5.15 // indirect
 	github.com/gookit/validate v1.4.6 // indirect
@@ -106,6 +108,7 @@ require (
 	github.com/lestrrat-go/strftime v1.0.5 // indirect
 	github.com/lib/pq v1.10.2 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
+	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/microsoft/go-mssqldb v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
@@ -128,7 +131,6 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/spf13/afero v1.9.5 // indirect
-	github.com/spf13/cast v1.5.1 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.16.0 // indirect
